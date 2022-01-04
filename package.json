@@ -1,7 +1,7 @@
 {
-  "name": "my-ts-lib",
+  "name": "esbuild-plugin-vue-jsx",
   "version": "0.0.0",
-  "description": "My awesome typescript library",
+  "description": "Vue3 jsx support for esbuild",
   "publishConfig": {
     "access": "public"
   },
@@ -18,15 +18,24 @@
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
     "build": "pnpm run build-fast -- --dts-resolve",
-    "test": "vitest run",
+    "test": "jest",
     "prepublishOnly": "pnpm run build"
   },
   "license": "MIT",
   "devDependencies": {
-    "@egoist/prettier-config": "1.0.0",
+    "@sucrase/jest-plugin": "^2.2.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.7",
+    "esbuild": "^0.14.10",
+    "jest": "^27.4.5",
     "prettier": "2.5.1",
     "tsup": "5.11.9",
     "typescript": "4.5.4",
-    "vitest": "0.0.124"
+    "vue": "3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@vue/babel-plugin-jsx": "^1.1.1"
   }
 }

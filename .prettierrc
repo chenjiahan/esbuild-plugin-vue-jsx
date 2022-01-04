@@ -1,1 +1,4 @@
-"@egoist/prettier-config"
+{
+  "singleQuote": true,
+  "proseWrap": "never"
+}

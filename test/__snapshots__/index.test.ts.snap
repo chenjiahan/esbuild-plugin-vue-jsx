@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`simple: test/fixture/dist/bar.js 1`] = `
+"// vue-jsx:./test/fixtures/bar.tsx
+import { createVNode as _createVNode, createTextVNode as _createTextVNode } from \\"vue\\";
+var bar_default = {
+  render() {
+    return _createVNode(\\"div\\", null, [_createTextVNode(\\"Hello world\\")]);
+  }
+};
+export {
+  bar_default as default
+};
+"
+`;
+
+exports[`simple: test/fixture/dist/foo.js 1`] = `
+"// vue-jsx:./test/fixtures/foo.jsx
+import { createVNode as _createVNode, createTextVNode as _createTextVNode } from \\"vue\\";
+var foo_default = {
+  render() {
+    return _createVNode(\\"div\\", null, [_createTextVNode(\\"Hello world\\")]);
+  }
+};
+export {
+  foo_default as default
+};
+"
+`;
