@@ -4,6 +4,8 @@ import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx';
 
 const name = 'vue-jsx';
 
+const isTsxPath = (path: string) => /\.tsx$/.test(path);
+
 const VueJsxPlugin = (options: VueJSXPluginOptions = {}): Plugin => ({
   name,
 
@@ -25,7 +27,7 @@ const VueJsxPlugin = (options: VueJSXPluginOptions = {}): Plugin => ({
       const babelResult = await babel.transformAsync(code, {
         filename: path,
         babelrc: false,
-        presets: ['@babel/preset-typescript'],
+        presets: isTsxPath(path) ? ['@babel/preset-typescript'] : [],
         plugins: [['@vue/babel-plugin-jsx', options]],
       });
 
