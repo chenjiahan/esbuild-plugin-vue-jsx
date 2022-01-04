@@ -8,6 +8,25 @@
 npm i esbuild-plugin-vue-jsx -D
 ```
 
+## Usage
+
+```ts
+import { build } from 'esbuild';
+import vueJsx from 'esbuild-plugin-vue-jsx';
+
+build({
+  plugins: [
+    vueJsx({
+      // options are passed on to @vue/babel-plugin-jsx
+    }),
+  ],
+});
+```
+
+## Options
+
+See [@vue/babel-plugin-jsx](https://github.com/vuejs/jsx-next).
+
 ## License
 
-MIT &copy; [EGOIST](https://github.com/sponsors/egoist)
+MIT.

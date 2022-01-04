@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`simple: test/fixture/dist/bar.js 1`] = `
+exports[`should passing options to @vue/babel-plugin-jsx: test/fixture/dist/foo.js 1`] = `
+"// vue-jsx:./test/fixtures/foo.jsx
+import { createTextVNode as _createTextVNode } from \\"vue\\";
+var foo_default = {
+  render() {
+    return myPragma(\\"div\\", null, [_createTextVNode(\\"Hello world\\")]);
+  }
+};
+export {
+  foo_default as default
+};
+"
+`;
+
+exports[`should transform jsx syntax correctly: test/fixture/dist/bar.js 1`] = `
 "// vue-jsx:./test/fixtures/bar.tsx
 import { createVNode as _createVNode, createTextVNode as _createTextVNode } from \\"vue\\";
 var bar_default = {
@@ -14,7 +28,7 @@ export {
 "
 `;
 
-exports[`simple: test/fixture/dist/foo.js 1`] = `
+exports[`should transform jsx syntax correctly: test/fixture/dist/foo.js 1`] = `
 "// vue-jsx:./test/fixtures/foo.jsx
 import { createVNode as _createVNode, createTextVNode as _createTextVNode } from \\"vue\\";
 var foo_default = {

@@ -1,9 +1,10 @@
 import fs from 'fs';
 import type { Plugin } from 'esbuild';
+import type { VueJSXPluginOptions } from '@vue/babel-plugin-jsx';
 
 const name = 'vue-jsx';
 
-const VueJsxPlugin = (): Plugin => ({
+const VueJsxPlugin = (options: VueJSXPluginOptions = {}): Plugin => ({
   name,
 
   setup(build) {
@@ -25,7 +26,7 @@ const VueJsxPlugin = (): Plugin => ({
         filename: path,
         babelrc: false,
         presets: ['@babel/preset-typescript'],
-        plugins: [['@vue/babel-plugin-jsx']],
+        plugins: [['@vue/babel-plugin-jsx', options]],
       });
 
       return {
