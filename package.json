@@ -1,6 +1,6 @@
 {
   "name": "esbuild-plugin-vue-jsx",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "description": "Vue3 jsx support for esbuild",
   "publishConfig": {
     "access": "public",
